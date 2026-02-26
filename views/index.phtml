@@ -3,7 +3,7 @@
     <div id="containerProducts">
         <?php foreach ($products as $product): ?>
             <div class="containerProduct">
-                <img src="<?= $product["imgPath"] ?>" alt="image produit">
+                <img src="./views/assets/imgProducts/<?= $product["imgPath"] ?>.jpg" alt="image produit">
                 <h3><?= $product["title"] ?></h3>
                 <p><?= $product["description"] ?></p>
                 <p><?= $product["price"] ?> €</p>
