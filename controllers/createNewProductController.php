@@ -7,5 +7,5 @@ if(count($_POST)){
     $price = (int) htmlspecialchars($_POST["price"]);
     $imgPath = htmlspecialchars($_POST["imgPath"]);
     addProduct($title, $description,$price,$imgPath);
-    header("Location:../");
+    header("Location: /dashbord");
 }

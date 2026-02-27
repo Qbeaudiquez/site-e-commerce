@@ -1,0 +1,45 @@
+<?php
+require_once("./controllers/dashbordControler.php")
+?>
+
+<h2>Créer une nouveau produit</h2>
+<form action="./controllers/createNewProductController.php" method="post">
+<label for="">Nom du produit</label>
+<input type="text" name="title" id="nameUser">
+<br>
+<label for="">Description du produit</label>
+<input type="text" name="description" id="nameUser">
+<br>
+<label for="">Prix du produit</label>
+<input type="text" name="price" id="nameUser">
+<br>
+<label for="">Chemin de l'image</label>
+<input type="text" name="imgPath" id="nameUser">
+<br>
+<button type="submit">Ajouter</button>
+</form>
+
+<h2>Modifier ou supprimer un produit</h2>
+    <div id="editDelContainer">
+    <?php foreach ($products as $product) : ?>
+<form action="./controllers/editDelProductController.php" method="post">
+    <input type="text" name="idProduit" id="idProduit-<?= $product['id'] ?>" value="<?= $product["id"] ?>" hidden>
+    <label for="newTitle-<?= $product['id'] ?>">Nom du produit : </label>
+    <input type="text" name="newTitle" id="newTitle-<?= $product['id'] ?>" value="<?= $product["title"] ?>">
+    <br>
+    <label for="newDescription-<?= $product['id'] ?>">Description : </label>
+    <textarea name="newDescription" id="newDescription-<?= $product['id'] ?>"><?= $product["description"] ?></textarea>
+    <br>
+    <label for="newPrice-<?= $product['id'] ?>">Prix : </label>
+    <input type="text" name="newPrice" id="newPrice-<?= $product['id'] ?>" value="<?= $product["price"] ?>">
+    <br>
+    <label for="newImgPath-<?= $product['id'] ?>">Adresse de l'image</label>
+    <input type="text" name="newImgPath" id="newImgPath-<?= $product['id'] ?>" value="<?= $product["imgPath"] ?>">
+    <button type="submit" name="action" value="edit">Modifier</button>
+<button type="submit" name="action" value="delete">Supprimer</button>
+</form>
+
+<?php endforeach;?>
+</div>
+
+

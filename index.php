@@ -1,4 +1,5 @@
 <?php
+session_start();
 $path = $_SERVER['REQUEST_URI'];
 
 switch ($path) {
@@ -14,7 +15,9 @@ switch ($path) {
     case ("/newUser"):
         $page = "newUser";
         break;
-
+    case ("/dashbord"):
+        $page = "dashbord";
+        break;
     default:
         $page = "404";
         break;

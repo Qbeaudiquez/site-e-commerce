@@ -1,3 +1,8 @@
+<?php
+require_once "./controllers/headerController.php";
+
+?>
+
 <header>
     <div id="logoIconsContainer">
         <h1 id="logo">Tp site e-commerce</h1>
@@ -7,8 +12,10 @@
     <nav>
         <ul>
             <li><a href="/">Accueil</a></li>
-            <li><a href="/catalogue">Catalogue</a></li>
-            <li><a href="/connexion">Connexion</a></li>
+            <?php if($_SESSION["connected"]) : ?>
+                <li><a href="/dashbord">Dashbord</a></li>
+            <?php endif;?>
+            <li><a href=<?= $linkConnectionLink ?>><?= $btnConnexionDisplay ?></a></li>
         </ul>
     </nav>
 </header>
