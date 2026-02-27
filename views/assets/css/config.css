@@ -14,3 +14,32 @@ main{
     align-items: center;
     gap: 20px;
 }
+
+form{
+    background-color: bisque;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 8px;
+    input, textarea{
+        padding: 5px;
+    }
+    textarea{
+        min-height: 100px;
+        width: 100%;
+    }
+    button{
+        margin-top: 20px;
+        background-color: brown;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 8px;
+        color: aliceblue;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    
+}
