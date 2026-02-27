@@ -1,12 +1,18 @@
 <?php
 $path = $_SERVER['REQUEST_URI'];
-require("./models/products.php");
-
-
 
 switch ($path) {
     case ("/"):
-        $page = "index";
+        $page = "home";
+        break;
+    case ("/catalogue"):
+        $page = "catalogue";
+        break;
+    case ("/connexion"):
+        $page = "connexion";
+        break;
+    case ("/newUser"):
+        $page = "newUser";
         break;
 
     default:
