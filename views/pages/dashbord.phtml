@@ -1,25 +1,25 @@
 <?php
 require_once("./controllers/dashbordControler.php")
 ?>
-
-<h2>Créer une nouveau produit</h2>
+<h2>Dashbord</h2>
+<h3>Créer une nouveau produit</h3>
 <form action="./controllers/createNewProductController.php" method="post">
 <label for="">Nom du produit</label>
 <input type="text" name="title" id="nameUser">
 <br>
 <label for="">Description du produit</label>
-<input type="text" name="description" id="nameUser">
+<textarea name="description" id="description"></textarea>
 <br>
 <label for="">Prix du produit</label>
-<input type="text" name="price" id="nameUser">
+<input type="text" name="price" id="price">
 <br>
 <label for="">Chemin de l'image</label>
-<input type="text" name="imgPath" id="nameUser">
+<input type="text" name="imgPath" id="imgPath">
 <br>
 <button type="submit">Ajouter</button>
 </form>
 
-<h2>Modifier ou supprimer un produit</h2>
+<h3>Modifier ou supprimer un produit</h3>
     <div id="editDelContainer">
     <?php foreach ($products as $product) : ?>
 <form action="./controllers/editDelProductController.php" method="post">
