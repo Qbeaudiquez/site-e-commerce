@@ -1,53 +1,90 @@
-*{
+:root {
+    --main-color: #F2E8D5;
+    --main-light-color: #fcf9f2;
+    --secondary-color: #3f3f3f;
+    --interactive-color: #80A7BF;
+    --positive-color: #808C23;
+    --negative-color: #F24405;
+
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--secondary-color);
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
-body{
-    padding: 30px;
+
+body {
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
 }
 
-main{
+main {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    flex:1;
+    flex: 1;
+    padding-top: 100px;
 }
 
-form{
-    background-color: bisque;
+
+
+.upperLayerform {
+    background-color: var(--interactive-color);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    padding-top: 30px;
+
+    form {
+    background-color: var(--main-light-color);
     padding: 30px;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    border-radius: 8px;
-    input, textarea{
+    border-radius:50px 50px 8px 8px ;
+
+    input,
+    textarea {
         padding: 5px;
     }
-    textarea{
+
+    textarea {
         min-height: 100px;
         width: 100%;
     }
-    button{
+
+    button {
         margin-top: 20px;
-        background-color: brown;
         border: none;
         cursor: pointer;
         padding: 5px;
         border-radius: 8px;
         color: aliceblue;
-        &:hover{
+
+        &.blue{
+            background-color: var(--interactive-color);
+        }
+        &.green{
+            background-color: var(--positive-color);
+        }
+        &.red{
+            background-color: var(--negative-color);
+        }
+
+        &:hover {
             opacity: 0.8;
         }
     }
-    
+
+}
 }
