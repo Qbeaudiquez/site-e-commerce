@@ -1,16 +1,25 @@
+:root{
+    --main-color:#F2E8D5;
+    --main-light-color:#fcf9f2;
+    --secondary-color:#3f3f3f;
+    --interactive-color:#80A7BF;
+    --positive-color:#808C23;
+    --negative-color:#F24405;
+
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--secondary-color);
 }
 
 html, body {
     height: 100%;
 }
 body{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
+    background-color: var(--main-color);
 }
 
 main{
@@ -21,6 +30,7 @@ main{
     justify-content: center;
     gap: 20px;
     flex:1;
+    padding-top: 100px;
 }
 
 form{

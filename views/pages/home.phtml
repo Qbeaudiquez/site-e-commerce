@@ -7,12 +7,18 @@ require("./controllers/homeController.php");
     <h2>Tous les produits</h2>
     <div id="containerProducts">
         <?php foreach ($products as $product): ?>
-            <div class="containerProduct">
-                <img src="./views/assets/imgProducts/<?= $product["imgPath"] ?>.jpg" alt="image produit">
+            <div class="upperLayer">
                 <h3><?= $product["title"] ?></h3>
-                <p><?= $product["description"] ?></p>
-                <p><?= $product["price"] ?> €</p>
+            <div class="containerProduct">
+                
+                <p class="description"><?= $product["description"] ?></p>
+                <div class="imgContainer">
+                <img src="./views/assets/imgProducts/<?= $product["imgPath"] ?>.jpg" alt="image produit">
+                </div>
+                
+                <p class="price"><?= $product["price"] ?> €</p>
             </div>
+        </div>
         <?php endforeach; ?>
     </div>
 </section>
