@@ -3,6 +3,7 @@ require_once("./controllers/dashbordControler.php")
 ?>
 <h2>Dashbord</h2>
 <h3>Créer une nouveau produit</h3>
+<div class="upperLayerform">
 <form action="./controllers/createNewProductController.php" method="post">
 <label for="">Nom du produit</label>
 <input type="text" name="title" id="nameUser">
@@ -16,12 +17,13 @@ require_once("./controllers/dashbordControler.php")
 <label for="">Chemin de l'image</label>
 <input type="text" name="imgPath" id="imgPath">
 <br>
-<button type="submit">Ajouter</button>
+<button class="green" type="submit">Ajouter</button>
 </form>
-
+</div>
 <h3>Modifier ou supprimer un produit</h3>
     <div id="editDelContainer">
     <?php foreach ($products as $product) : ?>
+        <div class="upperLayerform">
 <form action="./controllers/editDelProductController.php" method="post">
     <input type="text" name="idProduit" id="idProduit-<?= $product['id'] ?>" value="<?= $product["id"] ?>" hidden>
     <label for="newTitle-<?= $product['id'] ?>">Nom du produit : </label>
@@ -35,9 +37,10 @@ require_once("./controllers/dashbordControler.php")
     <br>
     <label for="newImgPath-<?= $product['id'] ?>">Adresse de l'image</label>
     <input type="text" name="newImgPath" id="newImgPath-<?= $product['id'] ?>" value="<?= $product["imgPath"] ?>">
-    <button type="submit" name="action" value="edit">Modifier</button>
-<button type="submit" name="action" value="delete">Supprimer</button>
+    <button class="green" type="submit" name="action" value="edit">Modifier</button>
+<button class="red" type="submit" name="action" value="delete">Supprimer</button>
 </form>
+</div>
 
 <?php endforeach;?>
 </div>
